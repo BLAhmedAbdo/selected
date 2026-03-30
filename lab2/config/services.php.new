@@ -1,0 +1,7 @@
+<?php
+
+return array_merge(require __DIR__.'/services.php', [
+    'prometheus' => [
+        'base_url' => env('PROMETHEUS_BASE_URL', 'http://localhost:9090'),
+    ],
+]);
