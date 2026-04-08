@@ -1,0 +1,20 @@
+{
+    "updated_at": "2026-04-08T22:58:17+00:00",
+    "endpoints": {
+        "/api/normal": {
+            "samples": []
+        },
+        "/api/slow": {
+            "samples": []
+        },
+        "/api/db": {
+            "samples": []
+        },
+        "/api/error": {
+            "samples": []
+        },
+        "/api/validate": {
+            "samples": []
+        }
+    }
+}
