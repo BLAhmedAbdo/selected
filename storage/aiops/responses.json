@@ -1,0 +1,44 @@
+[
+    {
+        "incident_id": "INC-151AE1488DA0",
+        "action_taken": "send alert",
+        "timestamp": "2026-04-17T07:50:40+00:00",
+        "result": "failed",
+        "notes": "Failed to execute `send alert`."
+    },
+    {
+        "incident_id": "INC-6B6F792FF8BB",
+        "action_taken": "circuit breaker",
+        "timestamp": "2026-04-17T07:50:40+00:00",
+        "result": "success",
+        "notes": "Simulated `circuit breaker` successfully."
+    },
+    {
+        "incident_id": "INC-6A576B007F25",
+        "action_taken": "scale service",
+        "timestamp": "2026-04-17T07:50:40+00:00",
+        "result": "success",
+        "notes": "Simulated `scale service` successfully."
+    },
+    {
+        "incident_id": "INC-151AE1488DA0",
+        "action_taken": "CRITICAL_ALERT",
+        "timestamp": "2026-04-17T07:51:08+00:00",
+        "result": "success",
+        "notes": "Escalated: Automated action failed previously."
+    },
+    {
+        "incident_id": "INC-6B6F792FF8BB",
+        "action_taken": "CRITICAL_ALERT",
+        "timestamp": "2026-04-17T07:51:08+00:00",
+        "result": "success",
+        "notes": "Escalated: Anomaly persists after automated action."
+    },
+    {
+        "incident_id": "INC-6A576B007F25",
+        "action_taken": "CRITICAL_ALERT",
+        "timestamp": "2026-04-17T07:51:08+00:00",
+        "result": "success",
+        "notes": "Escalated: Anomaly persists after automated action."
+    }
+]
