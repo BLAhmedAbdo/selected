@@ -1,1 +1,150 @@
-[]
+[
+    {
+        "incident_id": "INC-151AE1488DA0",
+        "incident_type": "ERROR_STORM",
+        "severity": "critical",
+        "status": "open",
+        "detected_at": "2026-04-10T02:36:06+00:00",
+        "affected_service": "Laravel",
+        "affected_endpoints": [
+            "/api/db"
+        ],
+        "triggering_signals": [
+            {
+                "signal_type": "ERROR_RATE_ANOMALY",
+                "endpoint": "/api/db",
+                "severity": "critical",
+                "metric": "error_rate",
+                "observed": 1,
+                "baseline": 0,
+                "reason": "error rate breached threshold"
+            },
+            {
+                "signal_type": "ENDPOINT_SPECIFIC_ANOMALY",
+                "endpoint": "/api/db",
+                "severity": "critical",
+                "metric": "endpoint_health",
+                "observed": 1,
+                "baseline": 0,
+                "reason": "endpoint is failing almost all requests"
+            }
+        ],
+        "baseline_values": {
+            "/api/db": {
+                "average_latency": 0,
+                "request_rate": 0,
+                "error_rate": 0,
+                "sample_count": 0,
+                "warm": false
+            }
+        },
+        "observed_values": {
+            "/api/db": {
+                "request_rate": 0.008696635271813335,
+                "error_rate": 1,
+                "latency_p95": 0.24333372449749374,
+                "latency_p50": 0.17543703187130777,
+                "error_categories": {
+                    "SYSTEM_ERROR": 1.0170560296166715
+                }
+            }
+        },
+        "summary": "Elevated error activity detected on multiple endpoints",
+        "fingerprint": "151ae1488da0c4068a562d1ea7cef1c6310a1f35"
+    },
+    {
+        "incident_id": "INC-6B6F792FF8BB",
+        "incident_type": "LOCALIZED_ENDPOINT_FAILURE",
+        "severity": "critical",
+        "status": "open",
+        "detected_at": "2026-04-10T02:36:06+00:00",
+        "affected_service": "Laravel",
+        "affected_endpoints": [
+            "/api/db"
+        ],
+        "triggering_signals": [
+            {
+                "signal_type": "ERROR_RATE_ANOMALY",
+                "endpoint": "/api/db",
+                "severity": "critical",
+                "metric": "error_rate",
+                "observed": 1,
+                "baseline": 0,
+                "reason": "error rate breached threshold"
+            },
+            {
+                "signal_type": "ENDPOINT_SPECIFIC_ANOMALY",
+                "endpoint": "/api/db",
+                "severity": "critical",
+                "metric": "endpoint_health",
+                "observed": 1,
+                "baseline": 0,
+                "reason": "endpoint is failing almost all requests"
+            }
+        ],
+        "baseline_values": {
+            "/api/db": {
+                "average_latency": 0,
+                "request_rate": 0,
+                "error_rate": 0,
+                "sample_count": 0,
+                "warm": false
+            }
+        },
+        "observed_values": {
+            "/api/db": {
+                "request_rate": 0.008696635271813335,
+                "error_rate": 1,
+                "latency_p95": 0.24333372449749374,
+                "latency_p50": 0.17543703187130777,
+                "error_categories": {
+                    "SYSTEM_ERROR": 1.0170560296166715
+                }
+            }
+        },
+        "summary": "Failure isolated to a specific endpoint",
+        "fingerprint": "6b6f792ff8bb9b775817f76b40176f6593e3807b"
+    },
+    {
+        "incident_id": "INC-6A576B007F25",
+        "incident_type": "TRAFFIC_SURGE",
+        "severity": "medium",
+        "status": "open",
+        "detected_at": "2026-04-10T02:44:03+00:00",
+        "affected_service": "Laravel",
+        "affected_endpoints": [
+            "/api/normal"
+        ],
+        "triggering_signals": [
+            {
+                "signal_type": "TRAFFIC_ANOMALY",
+                "endpoint": "/api/normal",
+                "severity": "medium",
+                "metric": "request_rate",
+                "observed": 0.036367,
+                "baseline": 0.001914,
+                "reason": "traffic rate exceeded 2x baseline"
+            }
+        ],
+        "baseline_values": {
+            "/api/normal": {
+                "average_latency": 0.070789,
+                "request_rate": 0.001914,
+                "error_rate": 0,
+                "sample_count": 19,
+                "warm": true
+            }
+        },
+        "observed_values": {
+            "/api/normal": {
+                "request_rate": 0.03636727309094546,
+                "error_rate": 0,
+                "latency_p95": 0.0475,
+                "latency_p50": 0.025,
+                "error_categories": []
+            }
+        },
+        "summary": "Traffic surge detected for endpoint",
+        "fingerprint": "6a576b007f257d72c7c84a0b232070e83b3e3b4d"
+    }
+]

@@ -1,0 +1,38 @@
+{
+    "incident_id": "INC-151AE1488DA0",
+    "root_cause_endpoint": "/api/validate",
+    "primary_signal": "Error Rate Surge",
+    "confidence_score": 0.4203987431487224,
+    "supporting_evidence": {
+        "baseline": {
+            "avg_latency_ms": 117.68649712003378,
+            "error_rate": 0.42857142857142855
+        },
+        "anomaly": {
+            "avg_latency_ms": 130.75226387849287,
+            "error_rate": 0.6
+        }
+    },
+    "error_category_distribution": {
+        "VALIDATION_ERROR": 9
+    },
+    "timeline_events": [
+        {
+            "time": "2026-04-10 02:23:06+00:00",
+            "event": "Normal baseline behavior observed."
+        },
+        {
+            "time": "2026-04-08 03:05:53.960615+00:00",
+            "event": "Anomaly window begins. Activity shifts on /api/validate."
+        },
+        {
+            "time": "2026-04-10 02:36:06+00:00",
+            "event": "Detection engine triggers incident INC-151AE1488DA0."
+        },
+        {
+            "time": "2026-04-08 03:08:53.627282+00:00",
+            "event": "Peak anomaly window ends (or telemetry truncated)."
+        }
+    ],
+    "recommended_action": "Investigate recent deployments or upstream dependencies for '/api/validate'. Primary anomaly is Error Rate Surge."
+}

@@ -30,9 +30,14 @@ class TelemetryMiddleware
 
         $errorCategory = null;
 
+        $content = json_decode($response->getContent(), true);
+        if (is_array($content) && isset($content['error_category'])) {
+            $errorCategory = $content['error_category'];
+        }
+
         if ($latencyMs > 4000) {
             $errorCategory = 'TIMEOUT_ERROR';
-        } elseif ($response->getStatusCode() >= 400) {
+        } elseif ($errorCategory === null && $response->getStatusCode() >= 400) {
             $errorCategory = 'SYSTEM_ERROR';
         }
 
